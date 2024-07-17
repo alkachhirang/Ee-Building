@@ -9,10 +9,10 @@
   text-decoration: none !important;
 }
 
-/* body,
+body,
 html {
   overflow-x: hidden !important;
-} */
+}
 
 /*-----------------font-family--------------*/
 .ff_jakarta {
@@ -27,6 +27,7 @@ html {
 .ff_inter {
   font-family: 'inter', sans-serif;
 }
+
 @font-face {
   font-family: 'neuemachinalight';
   src: url('/assets/fonts/NeueMachina-Light.otf');
@@ -58,13 +59,14 @@ html {
 /*-------------------root------------------*/
 :root {
   /*=========font-size========*/
-  --fs-xs: 14px;
+  --fs-xs: 12px;
   --fs-sm: 16px;
   --fs-md: 18px;
-  --fs_2md: 22px;
+  --fs-2md: 22px;
+  --fs-4md: 18px;
   --fs-lg: 38px;
-  --fs-4lg: 46px;
-  --fs-xl: 52px;
+  --fs-4lg: 32px;
+  --fs-xl: 28px;
   --fs-xxl: 36px;
 
   /*-----------line-height----------*/
@@ -78,11 +80,9 @@ html {
 
   /*---------color---------*/
   --blue-: #1643C3;
-  --navyblue:#4878FF;
+  --navyblue: #4878FF;
   --grey-: #4D4D4D;
   --lightblue-: #6C67F133;
-
-
 }
 
 .lh_xsm {
@@ -98,11 +98,19 @@ html {
 }
 
 .lh_sm {
-  line-height: var(--fs-sm);
+  line-height: var(--lh-sm);
+}
+
+.lh_md {
+  line-height: var(--lh-md);
 }
 
 .lh_5md {
   line-height: var(--lh-5md);
+}
+
+.lh_2lg {
+  line-height: var(--lh-2lg);
 }
 
 .text_navyblue {
@@ -135,6 +143,10 @@ html {
 
 .fs_2md {
   font-size: var(--fs-2md);
+}
+
+.fs_4md {
+  font-size: var(--fs-4md);
 }
 
 .fs_lg {
@@ -199,12 +211,13 @@ html {
   color: var(--blue-);
   transition: all 300ms linear;
 }
+
 .nav_btn:hover {
   box-shadow: 0 8px 16px 0 #1644c354, 0 6px 20px 0 #1644c346;
 }
 
-.mt_100 {
-  margin-top: 100px !important;
+.mb_header {
+  margin-bottom: 50px !important;
 }
 
 .blue_circle {
@@ -219,6 +232,28 @@ html {
   top: 5%;
 }
 
+/*--------------------Amplify-section---------------------*/
+.amplify_bg_img {
+  background-image: url("/assets/images/png/bulls.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-cloud {
+  z-index: 2;
+  position: absolute;
+  bottom: -6%;
+}
+
+.mw-555 {
+  max-width: 555px;
+}
+
+.mt_2 {
+  margin-top: -2px;
+}
+
 /*-------------------cord-statergy---------------*/
 .opacity_8 {
   opacity: 80%;
@@ -230,9 +265,27 @@ html {
   background: linear-gradient(124deg, rgba(19, 245, 255, 0.25) 7.19%, rgba(0, 66, 255, 0.00) 93.2%);
   backdrop-filter: blur(12.5px);
   padding: 17px 19px 31px 19px;
-  max-width: 370px;
+  max-width: 335px;
   box-shadow: 0px 4px 41px 0px #4281EE70;
 
+}
+
+ol {
+  counter-reset: list;
+}
+
+ol li {
+  position: relative;
+}
+
+ol li:before {
+  counter-increment: list;
+  content: counter(list) ". ";
+  position: absolute;
+  left: -20px;
+  color: #ffffff;
+  opacity: 80%;
+  font-weight: normal;
 }
 
 .core_line::after {
@@ -268,8 +321,8 @@ html {
 }
 
 .py_core {
-  padding-top: 78px;
-  padding-bottom: 92px;
+  padding-top: 70px;
+  padding-bottom: 25px;
 }
 
 .mb_44 {
@@ -297,6 +350,60 @@ html {
   width: 51px !important;
 }
 
+/*------------------tokenomics-section--------------- */
+.tokenomics_bg_img {
+  background-image: url(/assets/images/png/tokenomicsBg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.col_gradieant{
+  background: linear-gradient(76deg, #1643C3 5.09%, #369EFE 88.75%);
+  box-shadow: 0px 17px 29px 0px rgba(21, 64, 186, 0.17);
+  backdrop-filter: blur(9.5px);
+}
+
+.py_tokenomics {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.mb_19 {
+  margin-bottom: 19px;
+}
+
+.mb_25 {
+  margin-bottom: 25px;
+}
+
+.contact_btn {
+  background: linear-gradient(93deg, #1643C3 10.24%, #369EFE 208.68%);
+  padding: 9.5px 18.5px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  transition: all 300ms linear;
+}
+
+.contact_btn:hover {
+  background: #ffffff;
+  border: 1px solid var(--blue-);
+  color: var(--blue-);
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+.mt_4{
+  margin-top: -4px;
+}
+.mw_1920{
+  max-width: 1920px;
+}
+.token_svg{
+  width: 80px;
+  height: 80px;
+}
 @media (max-width: 991.98px) {
   .menu-icon {
     width: 35px;
@@ -328,6 +435,7 @@ html {
     position: fixed;
     display: flex;
     z-index: 4;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -337,12 +445,8 @@ html {
     transition: all 300ms linear;
   }
 
-  .left_true {
-    left: 0;
-  }
-
   .left_false {
-    left: -100%;
+    left: -100% !important;
   }
 
   .d-none {
@@ -371,10 +475,12 @@ html {
     border-radius: 8px;
     color: #ffffff;
   }
-
-  .blue_circle {
-    background-color: #ffffff;
+}
+@media (min-width:1399px) {
+  .ml_xxl_115{
+    margin-left: -115px !important;
   }
+  
 }
 
 @media (min-width:1200px) {
@@ -384,15 +490,25 @@ html {
     --fs-sm: 16px;
     --fs-md: 18px;
     --fs-2md: 22px;
+    --fs_4md: 24px;
     --fs-lg: 38px;
     --fs-4lg: 46px;
-    --fs-xl: 52px;
     --fs-xxl: 85px !important;
+  }
+
+  .img-cloud {
+    bottom: -11% !important;
+  }
+
+  .py_tokenomics {
+    padding-top: 178px !important;
+    padding-bottom: 177px !important;
   }
 
   .gap_xl_107 {
     gap: 107px !important;
   }
+
   .translate_hero_img {
     transform: translate(-20px, -30px);
   }
@@ -401,10 +517,22 @@ html {
 @media (min-width:992px) {
   .header_bg_img {
     background-image: url(/assets/images/png/header_bg_img.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
+  }
+
+  .tokenomics_bg_img {
+    background-image: url(/assets/images/png/tokenomicsBg.webp);
+  }
+
+  .mb_header {
+    margin-bottom: 100px !important;
+  }
+
+  .img-cloud {
+    bottom: -9%;
+  }
+
+  .mw_415 {
+    max-width: 415px;
   }
 
   .mw_524 {
@@ -419,22 +547,56 @@ html {
     max-width: 819px;
   }
 
+  .mw_479 {
+    max-width: 479px;
+  }
+
   :root {
     --fs-xxl: 72px;
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:767.99px) {
+  .py_tokenomics {
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+  }
+
   .gap_md_11 {
     gap: 11px;
   }
 
   :root {
-    --fs-xxl: 72px;
+    --fs-xxl: 62px ;
+    --fs-xl: 72px !important;
+    --fs-4lg: 46px !important;
+    --fs-4md: 24px !important;
   }
 }
+
 @media (min-width:576px) {
+  .py_tokenomics {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
   :root {
     --fs-xxl: 52px;
+    --fs-xl: 37px;
+    --fs-4lg: 38px;
+    --fs-4md: 20px;
+  }
+
+  .img-cloud {
+    bottom: -7%;
+  }
+
+  .py_core {
+    padding-top: 150px;
+    padding-bottom: 92px;
+  }
+  .token_svg{
+    width: 112px !important;
+    height: 113px !important;
   }
 }
