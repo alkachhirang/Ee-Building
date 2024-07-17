@@ -85,9 +85,9 @@ Protocol" />
                             <a href="#Roadmap"
                                 class="text-white ff_raleway fs_sm fw-medium nav_line position-relative">Roadmap</a>
                         </li>
-                        <li>
+                        <li class="dropdown">
                             <a href="#More"
-                                class="text-white flex align-items-center ff_raleway fs_sm fw-medium nav_line position-relative">More
+                                class="text-white flex align-items-center ff_raleway fs_sm fw-medium nav_line position-relative dropdown-toggle">More
                                 <span>
                                     <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -97,6 +97,11 @@ Protocol" />
                                     </svg>
                                 </span>
                             </a>
+                            <ul class="dropdown-menu">
+                                <li><a aria-label="dropdown-icon" href="#help" class="ff_raleway fw-medium">Help</a></li>
+                                <li><a aria-label="dropdown-icon" href="#about" class="ff_raleway fw-medium">About us</a></li>
+                                <li><a aria-label="dropdown-icon" href="#contact" class="ff_raleway fw-medium">Contact</a></li>
+                            </ul>
                         </li>
                         <button aria-label="enterbtn"
                             class="nav_btn fs_sm fw-medium ff_raleway bg-transparent text-nowrap d-md-none d-block">Enter
@@ -136,7 +141,7 @@ Protocol" />
                     </div>
                 </div>
                 <div class="col-lg-6 col-12 mt-4 mt-md-5 mt-lg-0 pb-4 pb-lg-0">
-                    <img src="/assets/images/png/robote-img.webp" alt="Robote-img"
+                    <img src="/assets/images/webp/robote-img.webp" alt="Robote-img"
                         class="translate_hero_img w-100 d-lg-block d-none">
                     <img src="/assets/images/webp/hero_mobile.webp" alt="robote-img"
                         class="translate_hero_img w-100 d-block d-lg-none">
@@ -438,9 +443,7 @@ Protocol" />
                     </div>
                 </div>
             </div>
-
         </div>
-
     </section>
 </div>
     <!--------bootstrap-link--------->
@@ -470,6 +473,23 @@ Protocol" />
             slidesToShow: 1,
             slidesToScroll: 1,
         });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdown = document.querySelector('.dropdown');
+
+    dropdownToggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        dropdown.classList.toggle('open');
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!dropdown.contains(event.target) && dropdown.classList.contains('open')) {
+            dropdown.classList.remove('open');
+        }
+    });
+});
     </script>
 </body>
 

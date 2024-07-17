@@ -229,6 +229,52 @@
 .mw_178{
   max-width: 178px;
 }
+  /* dropdown */
+  .dropdown-toggle::after {
+    display: none !important;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+
+}
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--blue);
+    color: #ffffff;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    width: 100px;
+}
+
+.dropdown-menu li {
+    padding: 5px 10px;
+    width: 100px !important;
+}
+
+.dropdown-menu li a {
+    color: var(--blue-);
+    text-decoration: none !important;
+    width: 100px !important;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--blue);
+    width: 100px !important;
+}
+
+.dropdown.open .dropdown-menu {
+  width: 100px !important;
+    display: block;
+}
+
+  
 
 /*--------------------Amplify-section---------------------*/
 .amplify_bg_img {
@@ -349,8 +395,8 @@ ol li:before {
   width: 51px !important;
 }
 
-
 /*------------------tokenomics-section--------------- */
+
 .tokenomics_bg_img {
   background-image: url(/assets/images/webp/tokenomicsBg.webp);
   background-repeat: no-repeat;
