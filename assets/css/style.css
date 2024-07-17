@@ -187,7 +187,7 @@
 
 /*------------------------hero-section----------------*/
 .header_bg_img {
-  background-image: url(/assets/images/png/bg-header2.webp);
+  background-image: url(/assets/images/webp/bg-header2.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -232,7 +232,7 @@
 
 /*--------------------Amplify-section---------------------*/
 .amplify_bg_img {
-  background-image: url("/assets/images/png/bulls.webp");
+  background-image: url("/assets/images/webp/bulls2.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -256,7 +256,7 @@
   margin-top: -2px;
 }
 
-/*-------------------cord-statergy---------------*/
+/*-------------------core-statergy---------------*/
 .opacity_8 {
   opacity: 80%;
 }
@@ -301,8 +301,8 @@ ol li:before {
   height: 3px;
 }
 
-.cord_bg_img {
-  background-image: url(/assets/images/png/core-bg-img.webp);
+.core_bg_img {
+  background-image: url(/assets/images/webp/core-bg-img.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -349,9 +349,10 @@ ol li:before {
   width: 51px !important;
 }
 
+
 /*------------------tokenomics-section--------------- */
 .tokenomics_bg_img {
-  background-image: url(/assets/images/png/tokenomicsBg.webp);
+  background-image: url(/assets/images/webp/tokenomicsBg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -447,7 +448,7 @@ ol li:before {
     background-color: #1643C3;
     transition: .3s linear;
     padding-left: 0 !important;
-    transition: all 300ms linear;
+    transition: all 300ms linear ;
   }
 
   .left_false {
@@ -523,8 +524,8 @@ ol li:before {
   }
 
   .py_tokenomics {
-    padding-top: 178px !important;
-    padding-bottom: 177px !important;
+    padding-top: 133px !important;
+    padding-bottom: 133px !important;
   }
 
   .gap_xl_107 {
@@ -532,14 +533,14 @@ ol li:before {
   }
 
   .translate_hero_img {
-    transform: translate(-20px, -30px);
+    transform: translate(-20px, -57px);
   }
 }
 
 @media (min-width:992px) {
   .header_bg_img {
-    background-image: url(/assets/images/png/header_bg_img.webp);
-    max-height: 940px;
+    background-image: url(/assets/images/webp/header_bg_img.webp);
+    max-height: 910px;
   }
 
   .header_bg_img::after {
@@ -557,7 +558,7 @@ ol li:before {
   }
 
   .tokenomics_bg_img {
-    background-image: url(/assets/images/png/tokenomicsBg.webp);
+    background-image: url(/assets/images/webp/tokenomicsBg.webp);
   }
 
   .img-cloud {
@@ -625,7 +626,7 @@ ol li:before {
   }
 
   .py_core {
-    padding-top: 150px;
+    padding-top: 125px;
     padding-bottom: 92px;
   }
 
