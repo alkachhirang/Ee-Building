@@ -266,11 +266,6 @@
   width: 100px !important;
 }
 
-.dropdown-menu li a:hover {
-  background-color: var(--blue);
-  width: 100px !important;
-}
-
 .dropdown.open .dropdown-menu {
   width: 100px !important;
   display: block;
